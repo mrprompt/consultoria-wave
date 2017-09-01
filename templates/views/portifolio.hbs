@@ -1,0 +1,18 @@
+<div class="container">
+	<!-- if galleries -->
+	{{#if galleries}}
+		{{#each galleries}}
+			<h2>{{name}}</h2>
+			<div class="row portfolio">
+				{{#each images}}
+					<div class="col-sm-4 col-md-4 portfolio-item">
+						<img src="{{cloudinaryUrl width='450' height='450'}}" class="img-rounded">
+					</div>
+				{{/each}}
+			</div>
+		{{/each}}
+	{{else}}
+		<!-- else -->
+		<h3 class="text-muted">Não existe porfifólio cadastrado.</h3>
+	{{/if}}
+</div>
