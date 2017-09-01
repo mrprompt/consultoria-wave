@@ -60,7 +60,7 @@
 <div class="page-mask">
 	<div class="page-loader">
 		<div class="spinner"></div>
-		Loading...
+		Carregando...
 	</div>
 </div>
 <div class="wrap">
@@ -71,9 +71,8 @@
 			<div class="slidedown collapse">
 				<div class="container">
 					<div class="phone-email pull-left">
-						<a><i class="fa fa-phone"></i> Call Us : +880 111-111-111</a>
-						<a href="contato@consultoriawave.com"><i class="fa fa-envelope"></i> Email :
-							contato@consultoriawave.com</a>
+						<a><i class="fa fa-phone"></i> Ligue : +55 48 99907-6388</a>
+						<a href="contato@consultoriawave.com"><i class="fa fa-envelope"></i> Email : contato@consultoriawave.com</a>
 					</div>
 					<div class="pull-right">
 						<ul class="social pull-left">
@@ -127,13 +126,6 @@
 								<a href="{{ href }}">{{ label }}</a>
 							</li>
 						{{/each}}
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						{{#if user}}
-							<li><a href="/keystone/signout">Sign Out</a></li>
-						{{else}}
-							<li><a href="/keystone/signin">Sign In</a></li>
-						{{/if}}
 					</ul>
 				</nav>
 				<!-- Menu End -->
@@ -231,8 +223,8 @@
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 "> &copy; Copyright 2014 by <a href="#">Pixma</a>.
-						All Rights Reserved.
+					<div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 "> &copy; Copyright {{date format='YYYY'}} by <a href="/">Consultoria Wave</a>.
+						Todos os direitos reservados.
 					</div>
 					<div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
 						<ul class="social social-icons-footer-bottom">
@@ -278,7 +270,6 @@
 <script src="/js/imagesloaded.pkgd.min.js"></script>
 <script src="/js/waypoints.min.js"></script>
 <script src="/js/spectrum.js"></script>
-<script src="/js/switcher.js"></script>
 <script src="/js/custom.js"></script>
 {{{isAdminEditorJS user}}}
 </body>
