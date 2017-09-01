@@ -34,6 +34,10 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
+
+	'port' : process.env.PORT || 3002,
+
+	'wysiwyg cloudinary images':  true
 });
 
 // Load your project's Models
@@ -55,6 +59,7 @@ keystone.set('routes', require('./routes'));
 
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
+	galleries: 'galleries',
 	enquiries: 'enquiries',
 	users: 'users',
 });
