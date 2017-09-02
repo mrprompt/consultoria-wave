@@ -35,25 +35,22 @@ exports.initLocals = function (req, res, next) {
 					href: '/servicos/certidao-de-tratamento-acustico',
 				},
 				{
-					label: 'Acústica',
-					key: 'acustica',
-					href: '/servicos/acustica',
-				},
-				{
 					label: 'Método de trabalho',
 					key: 'metodo-de-trabalho',
 					href: '/servicos/metodo-de-trabalho',
-				},
-				{
-					label: 'Diferencial',
-					key: 'diferencial',
-					href: '/servicos/diferencial',
 				},
 				{
 					label: 'Equipamentos',
 					key: 'equipamentos',
 					href: '/servicos/equipamentos',
 				},
+			],
+		},
+		{
+			label: 'Acústica',
+			key: 'acustica',
+			href: '/acustica',
+			navLinks: [
 				{
 					label: 'Elementos Acústicos',
 					key: 'elementos-acusticos',
@@ -72,6 +69,23 @@ exports.initLocals = function (req, res, next) {
 			],
 		},
 		{
+			label: 'Empresa',
+			key: 'empresa',
+			href: '#',
+			navLinks: [
+				{
+					label: 'Diferencial',
+					key: 'diferencial',
+					href: '/servicos/diferencial',
+				},
+				{
+					label: 'Sobre',
+					key: 'sobre',
+					href: '/sobre',
+				},
+			],
+		},
+		{
 			label: 'Portifólio',
 			key: 'portifolio',
 			href: '/portifolio',
@@ -80,11 +94,6 @@ exports.initLocals = function (req, res, next) {
 			label: 'Clientes',
 			key: 'clientes',
 			href: '/clientes',
-		},
-		{
-			label: 'Sobre',
-			key: 'sobre',
-			href: '/sobre',
 		},
 		{
 			label: 'Contato',
