@@ -564,6 +564,8 @@ h2.title {
 #main {
     background-color: #fff;
 	padding: 0 0 60px;
+	min-height: 600px; 
+	padding-bottom: 2em;
 }
 
 .home #main, .home-3 #main, .home-4 #main, .page-services #main, .about #main {
