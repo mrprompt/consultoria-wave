@@ -326,5 +326,19 @@ module.exports = function () {
 		return obj._[underscoreMethod].format();
 	};
 
+	_helpers.limit = function (context = {}, block = {}) {
+		var ret = '',
+			offset = parseInt(block.hash.offset) || 0,
+			limit = parseInt(block.hash.limit) || 5,
+			i = (offset < context.length) ? offset : 0,
+			j = ((limit + offset) < context.length) ? (limit + offset) : context.length;
+
+		for (i, j; i < j; i++) {
+			ret += block.fn(context[i]);
+		}
+
+		return ret;
+	};
+
 	return _helpers;
 };

@@ -40,28 +40,6 @@ jQuery().waypoint && jQuery("body").imagesLoaded(function () {
             triggerOnce: !0
         })
     });
-
-
-
-/*----------------------------------------------------*/
-/*	Flickr Feed
-/*----------------------------------------------------*/
-
-$('ul#flickrfeed').jflickrfeed({
-		limit: 6,
-		qstrings: {
-			id: '71865026@N00'
-		},
-		itemTemplate: '<li>'+
-						'<a rel="prettyPhoto[pp_gal]" href="{{image}}">' +
-							'<img src="{{image_s}}" alt="{{title}}" />' +
-						'</a>' +
-					  '</li>'
-	}, function(data) {
-		$('a[rel^="prettyPhoto"]').prettyPhoto();
-	});
-
-
 	
 /*----------------------------------------------------*/
 /*	Superfish Mainmenu Section
@@ -517,26 +495,6 @@ jQuery(document).ready(function () {
 		});
 	
 	});
-
-
-
-/*----------------------------------------------------*/
-/*	Twitter Section
-/*----------------------------------------------------*/
-
-	jQuery('#tweets').tweetMachine('', {
-		backendScript:  'http://demo.fifothemes.com/pixma/ajax/getFromTwitter.php',
-		endpoint: 'statuses/user_timeline',
-		user_name: 'FIFOThemes',
-		include_retweets: true,
-		exclude_replies: false,
-		limit: 1,
-		autoRefresh: false
-	});
-
-
-
-
 
 /*----------------------------------------------------*/
 /*	Tabs Control Section

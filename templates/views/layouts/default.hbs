@@ -83,8 +83,8 @@
 			<div class="slidedown collapse">
 				<div class="container">
 					<div class="phone-email pull-left">
-						<a><i class="fa fa-phone"></i> Ligue : +55 48 99907-6388</a>
-						<a href="contato@consultoriawave.com"><i class="fa fa-envelope"></i> Email : contato@consultoriawave.com</a>
+						<a href="tel:005548999076388"><i class="fa fa-phone"></i> Ligue : +55 48 99907-6388</a>
+						<a href="mailto:contato@consultoriawave.com"><i class="fa fa-envelope"></i> Email : contato@consultoriawave.com</a>
 					</div>
 					<div class="pull-right">
 						<ul class="social pull-left">
@@ -104,6 +104,7 @@
 			</div>
 		</div>
 		<!-- Header Top Bar End -->
+		
 		<!-- Main Header Start -->
 		<div class="main-header">
 			<div class="container">
@@ -130,11 +131,12 @@
 					</a>
 				</div>
 				<!-- Mobile Menu End -->
+				
 				<!-- Menu Start -->
 				<nav class="collapse navbar-collapse menu">
 					<ul class="nav navbar-nav sf-menu">
 						{{# each navLinks}}
-							<li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
+							<li {{#ifeq section key}}class="active"{{else}}{{/ifeq}}>
 								<a href="{{ href }}">{{ label }}</a>
 							</li>
 						{{/each}}
@@ -189,32 +191,25 @@
 		<div class="footer-top">
 			<div class="container">
 				<div class="row">
-					<section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-one">
-						<h3>About</h3>
+					<section class="col-lg-8 col-md-8 col-xs-12 col-sm-8 footer-one">
+						<h3>Sobre a Wave</h3>
 						<p>
-							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-							been the industry's standard dummy text ever since the 1500s.
+							A Consultoria Wave...
 						</p>
 					</section>
-					<section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-two">
-						<h3>Twitter Stream</h3>
-						<ul id="tweets">
-						</ul>
-					</section>
-					<section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-three">
-						<h3>Contact Us</h3>
+					<section class="col-lg-4 col-md-4 col-xs-12 col-sm-4 footer-three">
+						<h3>Entre em Contato</h3>
 						<ul class="contact-us">
 							<li>
 								<i class="fa fa-map-marker"></i>
 								<p>
-									<strong class="contact-pad">Address:</strong> House: 325, Road: 2,<br> Mirpur DOHS
-									<br>
-									Dhaka, Bangladesh
+									<strong class="contact-pad">Endereço:</strong> Av. Santa Catarina, n° 1619<br>
+									Balneário, Florianópolis SC
 								</p>
 							</li>
 							<li>
 								<i class="fa fa-phone"></i>
-								<p><strong>Phone:</strong> +880 111-111-111</p>
+								<p><strong>Telefone:</strong> <a href="tel:005548999076388">+55 48 99907-6388</a></p>
 							</li>
 							<li>
 								<i class="fa fa-envelope"></i>
@@ -222,10 +217,6 @@
 								</p>
 							</li>
 						</ul>
-					</section>
-					<section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-four">
-						<h3>Flickr Photostream</h3>
-						<ul id="flickrfeed" class="thumbs"></ul>
 					</section>
 				</div>
 			</div>
@@ -278,7 +269,6 @@
 <script src="/js/jquery.gmap.min.js"></script>
 <script src="/js/circularnav.js"></script>
 <script src="/js/jquery.sticky.js"></script>
-<script src="/js/jflickrfeed.js"></script>
 <script src="/js/imagesloaded.pkgd.min.js"></script>
 <script src="/js/waypoints.min.js"></script>
 <script src="/js/spectrum.js"></script>
