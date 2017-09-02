@@ -19,12 +19,78 @@ var _ = require('lodash');
 */
 exports.initLocals = function (req, res, next) {
 	res.locals.navLinks = [
-		{ label: 'Home', key: 'home', href: '/' },
-		{ label: 'Serviços', key: 'servicos', href: '/servicos' },
-		{ label: 'Portifólio', key: 'portifolio', href: '/portifolio' },
-		{ label: 'Clientes', key: 'clientes', href: '/clientes' },
-		{ label: 'Sobre', key: 'sobre', href: '/sobre' },
-		{ label: 'Contato', key: 'contact', href: '/contato' },
+		{
+			label: 'Home',
+			key: 'home',
+			href: '/',
+		},
+		{
+			label: 'Serviços',
+			key: 'servicos',
+			href: '/servicos',
+			navLinks: [
+				{
+					label: 'Certidão de Tratamento Acústico',
+					key: 'certidao-de-tratamento-acustico',
+					href: '/servicos/certidao-de-tratamento-acustico',
+				},
+				{
+					label: 'Acústica',
+					key: 'acustica',
+					href: '/servicos/acustica',
+				},
+				{
+					label: 'Método de trabalho',
+					key: 'metodo-de-trabalho',
+					href: '/servicos/metodo-de-trabalho',
+				},
+				{
+					label: 'Diferencial',
+					key: 'diferencial',
+					href: '/servicos/diferencial',
+				},
+				{
+					label: 'Equipamentos',
+					key: 'equipamentos',
+					href: '/servicos/equipamentos',
+				},
+				{
+					label: 'Elementos Acústicos',
+					key: 'elementos-acusticos',
+					href: '/servicos/elementos-acusticos',
+				},
+				{
+					label: 'Isolamento Acústico',
+					key: 'isolamento-acustico',
+					href: '/servicos/isolamento-acustico',
+				},
+				{
+					label: 'Tratamento Acústico',
+					key: 'tratamento-acustico',
+					href: '/servicos/tratamento-acustico',
+				},
+			],
+		},
+		{
+			label: 'Portifólio',
+			key: 'portifolio',
+			href: '/portifolio',
+		},
+		{
+			label: 'Clientes',
+			key: 'clientes',
+			href: '/clientes',
+		},
+		{
+			label: 'Sobre',
+			key: 'sobre',
+			href: '/sobre',
+		},
+		{
+			label: 'Contato',
+			key: 'contact',
+			href: '/contato',
+		},
 	];
 	res.locals.user = req.user;
 	next();

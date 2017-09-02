@@ -136,9 +136,25 @@
 				<nav class="collapse navbar-collapse menu">
 					<ul class="nav navbar-nav sf-menu">
 						{{# each navLinks}}
-							<li {{#ifeq section key}}class="active"{{else}}{{/ifeq}}>
-								<a href="{{ href }}">{{ label }}</a>
-							</li>
+							{{# if navLinks }}
+								<li>
+									<a href="{{ href }}">
+										{{ label }}
+										<span class="sf-sub-indicator">
+                           					<i class="fa fa-angle-down "></i>
+                           				</span>
+									</a>
+									<ul>
+										{{# each navLinks}}
+											<li><a href="{{ href }}" class="sf-with-ul">{{ label }}</a></li>
+										{{/each}}
+									</ul>
+								</li>
+							{{ else }}
+								<li {{#ifeq section key}}class="active"{{else}}{{/ifeq}}>
+									<a href="{{ href }}">{{ label }}</a>
+								</li>
+							{{/if}}
 						{{/each}}
 					</ul>
 				</nav>
