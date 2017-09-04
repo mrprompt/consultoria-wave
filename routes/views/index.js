@@ -10,7 +10,7 @@ exports = module.exports = function (req, res) {
 	locals.section = 'home';
 
 	// find the portfolio
-	view.query('portfolio', keystone.list('Gallery').model.findOne({ name: 'Portifólio' }));
+	view.query('portfolio', keystone.list('Gallery').model.findOne({ key: 'portfolio' }));
 
 	// Render the view
 	view.render('index');
