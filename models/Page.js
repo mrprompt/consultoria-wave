@@ -17,8 +17,7 @@ Page.add({
 	uri: { type: String, required: true, initial: true },
 	menu: { type: String, required: true, initial: true },
 	content: {
-		brief: { type: Types.Html, wysiwyg: true, height: 150 },
-		extended: { type: Types.Html, wysiwyg: true, height: 400 },
+		extended: { type: Types.Html, wysiwyg: true, height: 550 },
 	},
 });
 

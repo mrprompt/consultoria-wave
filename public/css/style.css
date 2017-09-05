@@ -1,8 +1,8 @@
 body {
     color: #000;
-    font-family: "Lora","Open Sans",Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    line-height: 24px;
+    font-family: "Source Serif Pro","Open Sans",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 26px;
 }
 
 body.boxed header {
@@ -84,7 +84,7 @@ img {
 h1,h2,h3,h4,h5,h6 {
     font-weight: normal;
     color: #000;
-    font-family: 'Oswald',sans-serif;
+    font-family: 'Source Serif Pro','Oswald',sans-serif;
     text-shadow: 0 0 1px rgba(0,0,0,0.01);
 }
 
@@ -2335,7 +2335,7 @@ a.portfolio-item-link {
 .portfolio-item-title a {
     font-weight: 600;
     font-size: 14px;
-    font-family: "Open Sans", Arial, Verdana;
+    font-family: "Source Serif Pro", "Open Sans", Arial, Verdana;
     color: #666;
     -webkit-transition: all 0.25s ease-out;
     -moz-transition: all 0.25s ease-out;
@@ -2621,6 +2621,7 @@ header .social li.rss:hover,footer .social li.rss:hover {
 
 .menu > ul li a {
 	font-weight:bold;
+	font-size: 110%;
 }
 
 .navbar-toggle {
@@ -2630,7 +2631,7 @@ header .social li.rss:hover,footer .social li.rss:hover {
 }
 
 input,button,select,textarea {
-    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+    font-family: "Source Serif Pro","Open Sans",Helvetica,Arial,sans-serif;
 }
 
 strong,.author-content .data a {

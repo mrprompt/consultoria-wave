@@ -27,22 +27,22 @@ exports.initLocals = function (req, res, next) {
 		{
 			label: 'Serviços',
 			key: 'servicos',
-			href: '/servicos',
+			href: '#',
 			navLinks: [
-				{
-					label: 'Certidão de Tratamento Acústico',
-					key: 'certidao-de-tratamento-acustico',
-					href: '/servicos/certidao-de-tratamento-acustico',
-				},
 				{
 					label: 'Método de trabalho',
 					key: 'metodo-de-trabalho',
-					href: '/servicos/metodo-de-trabalho',
+					href: '/pagina/metodo-de-trabalho',
 				},
 				{
 					label: 'Equipamentos',
 					key: 'equipamentos',
-					href: '/servicos/equipamentos',
+					href: '/pagina/equipamentos',
+				},
+				{
+					label: 'Certidão de Tratamento Acústico',
+					key: 'certidao-de-tratamento-acustico',
+					href: '/pagina/certidao-de-tratamento-acustico',
 				},
 			],
 		},
@@ -54,17 +54,22 @@ exports.initLocals = function (req, res, next) {
 				{
 					label: 'Elementos Acústicos',
 					key: 'elementos-acusticos',
-					href: '/servicos/elementos-acusticos',
+					href: '/pagina/elementos-acusticos',
 				},
 				{
 					label: 'Isolamento Acústico',
 					key: 'isolamento-acustico',
-					href: '/servicos/isolamento-acustico',
+					href: '/pagina/isolamento-acustico',
 				},
 				{
 					label: 'Tratamento Acústico',
 					key: 'tratamento-acustico',
-					href: '/servicos/tratamento-acustico',
+					href: '/pagina/tratamento-acustico',
+				},
+				{
+					label: 'Legislação',
+					key: 'legislacao',
+					href: '/pagina/legislacao',
 				},
 			],
 		},
@@ -76,12 +81,29 @@ exports.initLocals = function (req, res, next) {
 				{
 					label: 'Diferencial',
 					key: 'diferencial',
-					href: '/servicos/diferencial',
+					href: '/pagina/diferencial',
 				},
 				{
-					label: 'Sobre',
-					key: 'sobre',
-					href: '/sobre',
+					label: 'Profissional',
+					key: 'profissional',
+					href: '/pagina/profissional',
+				},
+			],
+		},
+		{
+			label: 'Curiosidades',
+			key: 'curiosidades',
+			href: '#',
+			navLinks: [
+				{
+					label: 'Paisagem Sonora',
+					key: 'paisagem-sonora',
+					href: '/pagina/paisagem-sonora',
+				},
+				{
+					label: 'Gravações Binaurais',
+					key: 'gravacoes-binaurais',
+					href: '/pagina/gravacoes-binaurais',
 				},
 			],
 		},
