@@ -11,6 +11,7 @@ exports = module.exports = function (req, res) {
 
 	// find the portfolio
 	view.query('portfolio', keystone.list('Gallery').model.findOne({ key: 'trabalhos-recentes' }));
+	view.query('slides', keystone.list('Gallery').model.findOne({ key: 'slides' }));
 
 	// Render the view
 	view.render('index');

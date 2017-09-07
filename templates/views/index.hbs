@@ -5,18 +5,11 @@
 	<div class="fullwidthbanner rslider">
 		<ul>
 			<!-- THE FIRST SLIDE -->
+			{{#each slides.images}}
 			<li data-delay="1000" data-masterspeed="200" data-transition="fade">
-				<div class="slotholder"><img src="img/slider/Foto_1.jpg" data-fullwidthcentering="on" alt="Pixma"></div>
+				<div class="slotholder"><img src="{{cloudinaryUrl}}" data-fullwidthcentering="on" alt=""></div>
 			</li>
-			<li data-delay="1000" data-masterspeed="200" data-transition="fade">
-				<div class="slotholder"><img src="img/slider/Foto_2.jpg" data-fullwidthcentering="on" alt="Pixma"></div>
-			</li>
-			<li data-delay="1000" data-masterspeed="200" data-transition="fade">
-				<div class="slotholder"><img src="img/slider/Foto_3.jpg" data-fullwidthcentering="on" alt="Pixma"></div>
-			</li>
-			<li data-delay="1000" data-masterspeed="200" data-transition="fade">
-				<div class="slotholder"><img src="img/slider/Foto_4.jpg" data-fullwidthcentering="on" alt="Pixma"></div>
-			</li>
+			{{/each}}
 		</ul>
 	</div>
 </div>
