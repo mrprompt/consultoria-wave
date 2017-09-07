@@ -30,6 +30,11 @@ exports.initLocals = function (req, res, next) {
 			href: '#',
 			navLinks: [
 				{
+					label: 'Serviços',
+					key: 'servicos',
+					href: '/pagina/servicos',
+				},
+				{
 					label: 'Método de trabalho',
 					key: 'metodo-de-trabalho',
 					href: '/pagina/metodo-de-trabalho',
@@ -38,6 +43,11 @@ exports.initLocals = function (req, res, next) {
 					label: 'Equipamentos',
 					key: 'equipamentos',
 					href: '/pagina/equipamentos',
+				},
+				{
+					label: 'Avaliação de Material Acústico',
+					key: 'avaliacao-de-material-acustico',
+					href: '/pagina/avaliacao',
 				},
 				{
 					label: 'Certidão de Tratamento Acústico',
@@ -87,6 +97,11 @@ exports.initLocals = function (req, res, next) {
 					label: 'Profissional',
 					key: 'profissional',
 					href: '/pagina/profissional',
+				},
+				{
+					label: 'Importância',
+					key: 'importancia',
+					href: '/pagina/acustica',
 				},
 			],
 		},
