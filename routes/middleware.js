@@ -8,7 +8,7 @@
  * modules in your project's /lib directory.
  */
 var _ = require('lodash');
-
+var keystone = require('keystone');
 
 /**
 	Initialises the standard view locals
@@ -18,110 +18,8 @@ var _ = require('lodash');
 	or replace it with your own templates / logic.
 */
 exports.initLocals = function (req, res, next) {
+	res.locals.user = req.user;
 	res.locals.navLinks = [
-		{
-			label: 'Home',
-			key: 'home',
-			href: '/',
-		},
-		{
-			label: 'Serviços',
-			key: 'servicos',
-			href: '#',
-			navLinks: [
-				{
-					label: 'Serviços',
-					key: 'servicos',
-					href: '/pagina/servicos',
-				},
-				{
-					label: 'Método de trabalho',
-					key: 'metodo-de-trabalho',
-					href: '/pagina/metodo-de-trabalho',
-				},
-				{
-					label: 'Equipamentos',
-					key: 'equipamentos',
-					href: '/pagina/equipamentos',
-				},
-				{
-					label: 'Avaliação de Material Acústico',
-					key: 'avaliacao-de-material-acustico',
-					href: '/pagina/avaliacao',
-				},
-				{
-					label: 'Certidão de Tratamento Acústico',
-					key: 'certidao-de-tratamento-acustico',
-					href: '/pagina/certidao-de-tratamento-acustico',
-				},
-			],
-		},
-		{
-			label: 'Acústica',
-			key: 'acustica',
-			href: '/acustica',
-			navLinks: [
-				{
-					label: 'Elementos Acústicos',
-					key: 'elementos-acusticos',
-					href: '/pagina/elementos-acusticos',
-				},
-				{
-					label: 'Isolamento Acústico',
-					key: 'isolamento-acustico',
-					href: '/pagina/isolamento-acustico',
-				},
-				{
-					label: 'Tratamento Acústico',
-					key: 'tratamento-acustico',
-					href: '/pagina/tratamento-acustico',
-				},
-				{
-					label: 'Legislação',
-					key: 'legislacao',
-					href: '/pagina/legislacao',
-				},
-			],
-		},
-		{
-			label: 'Empresa',
-			key: 'empresa',
-			href: '#',
-			navLinks: [
-				{
-					label: 'Diferencial',
-					key: 'diferencial',
-					href: '/pagina/diferencial',
-				},
-				{
-					label: 'Profissional',
-					key: 'profissional',
-					href: '/pagina/profissional',
-				},
-				{
-					label: 'Importância',
-					key: 'importancia',
-					href: '/pagina/acustica',
-				},
-			],
-		},
-		{
-			label: 'Curiosidades',
-			key: 'curiosidades',
-			href: '#',
-			navLinks: [
-				{
-					label: 'Paisagem Sonora',
-					key: 'paisagem-sonora',
-					href: '/pagina/paisagem-sonora',
-				},
-				{
-					label: 'Gravações Binaurais',
-					key: 'gravacoes-binaurais',
-					href: '/pagina/gravacoes-binaurais',
-				},
-			],
-		},
 		{
 			label: 'Portifólio',
 			key: 'portifolio',
@@ -132,14 +30,15 @@ exports.initLocals = function (req, res, next) {
 			key: 'clientes',
 			href: '/clientes',
 		},
-		{
-			label: 'Contato',
-			key: 'contact',
-			href: '/contato',
-		},
 	];
-	res.locals.user = req.user;
-	next();
+	
+	keystone.list('PageCategory').model.find().exec(function (err, results) {
+		keystone.populateRelated(results, 'pages', function () {
+			res.locals.pages = results;
+
+			next();
+		});
+	});
 };
 
 

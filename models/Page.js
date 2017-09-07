@@ -12,13 +12,12 @@ var Page = new keystone.List('Page', {
 
 Page.add({
 	name: { type: String, required: true },
-	heroImage: { type: Types.CloudinaryImage },
-	images: { type: Types.CloudinaryImages },
-	uri: { type: String, required: true, initial: true },
-	menu: { type: String, required: true, initial: true },
 	content: {
 		extended: { type: Types.Html, wysiwyg: true, height: 550 },
 	},
+	categories: { type: Types.Relationship, ref: 'PageCategory', many: false },
+	images: { type: Types.CloudinaryImages },
 });
 
+Page.defaultColumns = 'name, menu|20%, categories|20%';
 Page.register();

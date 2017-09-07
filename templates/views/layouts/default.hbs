@@ -138,6 +138,24 @@
 				<!-- Menu Start -->
 				<nav class="collapse navbar-collapse menu">
 					<ul class="nav navbar-nav sf-menu">
+						<li {{#ifeq section key}}class="active"{{else}}{{/ifeq}}>
+							<a href="/">Home</a>
+						</li>
+						{{# each pages}}
+							<li>
+								<a href="#">
+									{{ name }}
+									<span class="sf-sub-indicator">
+										<i class="fa fa-angle-down "></i>
+									</span>
+								</a>
+								<ul>
+									{{# each pages}}
+										<li><a href="/pagina/{{ key }}" class="sf-with-ul">{{ name }}</a></li>
+									{{/each}}
+								</ul>
+							</li>
+						{{/each}}
 						{{# each navLinks}}
 							{{# if navLinks }}
 								<li>
@@ -159,6 +177,9 @@
 								</li>
 							{{/if}}
 						{{/each}}
+						<li {{#ifeq section key}}class="active"{{else}}{{/ifeq}}>
+							<a href="/contato">Contato</a>
+						</li>
 					</ul>
 				</nav>
 				<!-- Menu End -->

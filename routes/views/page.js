@@ -8,9 +8,9 @@ exports = module.exports = function (req, res) {
 
 	// Set locals
 	locals.section = 'page';
-
+	
 	// Load the galleries by sortOrder
-	view.query('page', keystone.list('Page').model.findOne({ uri: uri }).sort('sortOrder'));
+	view.query('page', keystone.list('Page').model.findOne({ key: uri }));
 
 	// Render the view
 	view.render('page');

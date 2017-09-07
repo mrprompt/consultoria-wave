@@ -60,6 +60,7 @@ keystone.set('routes', require('./routes'));
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
 	'Galerias': 'galleries',
+	'Categorias': 'PageCategory',
 	'Páginas': 'pages',
 	'Contatos': 'enquiries',
 	'Usuários': 'users',
