@@ -2624,6 +2624,11 @@ header .social li.rss:hover,footer .social li.rss:hover {
 	font-size: 110%;
 }
 
+.menu > ul li > ul li a {
+	font-weight: normal;
+	font-size: 120%;
+} 
+
 .navbar-toggle {
     border: none;
     border-radius: 2px;
