@@ -1,10 +1,9 @@
 <div class="container">
-	<h1>Portifólio</h1>
-</div>
-<div class="container">
+	<h2>Projetos</h2>
+	
 	<!-- if galleries -->
-	{{#if galleries}}
-		{{#each galleries}}
+	{{#if projetos}}
+		{{#each projetos}}
 			<div class="row portfolio">
 				{{#each images}}
 					<div class="col-sm-4 col-md-4 portfolio-item">
@@ -19,6 +18,54 @@
 		{{/each}}
 	{{else}}
 		<!-- else -->
-		<h3 class="text-muted">Não existe porfifólio cadastrado.</h3>
+		<div class="alert alert-info">Não existem projetos cadastrados.</div>
+	{{/if}}
+	
+	<hr class="clearfix">
+	
+	<h2>Trabalhos Recentes</h2>
+	
+	<!-- if galleries -->
+	{{#if recentes}}
+		{{#each recentes}}
+			<div class="row portfolio">
+				{{#each images}}
+					<div class="col-sm-4 col-md-4 portfolio-item">
+						<a href="{{cloudinaryUrl width='1024' height='768'}}" class="portfolio-item-link" data-rel="prettyPhoto" >
+							<span class="portfolio-item-hover"></span><span class="fullscreen"><i class="fa fa-search"></i></span>
+							<img src="{{cloudinaryUrl width='450' height='450'}}" alt=" " class="img-rounded">
+						</a>
+						<div class="clearfix"></div>
+					</div>
+				{{/each}}
+			</div>
+		{{/each}}
+	{{else}}
+		<!-- else -->
+		<div class="alert alert-info">Não existem trabalhos recentes cadastrados.</div>
+	{{/if}}
+	
+	<hr class="clearfix">
+
+	<h2>Trabalhos Ralizados</h2>
+	
+	<!-- if galleries -->
+	{{#if realizados}}
+		{{#each realizados}}
+			<div class="row portfolio">
+				{{#each images}}
+					<div class="col-sm-4 col-md-4 portfolio-item">
+						<a href="{{cloudinaryUrl width='1024' height='768'}}" class="portfolio-item-link" data-rel="prettyPhoto" >
+							<span class="portfolio-item-hover"></span><span class="fullscreen"><i class="fa fa-search"></i></span>
+							<img src="{{cloudinaryUrl width='450' height='450'}}" alt=" " class="img-rounded">
+						</a>
+						<div class="clearfix"></div>
+					</div>
+				{{/each}}
+			</div>
+		{{/each}}
+	{{else}}
+		<!-- else -->
+		<div class="alert alert-info">Não existem trabalhos realizados cadastrados.</div>
 	{{/if}}
 </div>

@@ -9,7 +9,9 @@ exports = module.exports = function (req, res) {
 	locals.section = 'gallery';
 
 	// Load the galleries by sortOrder
-	view.query('galleries', keystone.list('Gallery').model.find({ key: 'portfolio' }).sort('sortOrder'));
+	view.query('projetos', keystone.list('Gallery').model.find({ key: 'projetos' }).sort('sortOrder'));
+	view.query('recentes', keystone.list('Gallery').model.find({ key: 'trabalhos-recentes' }).sort('sortOrder'));
+	view.query('realizados', keystone.list('Gallery').model.find({ key: 'trabalhos-realizados' }).sort('sortOrder'));
 
 	// Render the view
 	view.render('portifolio');
