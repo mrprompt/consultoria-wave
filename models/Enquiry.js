@@ -52,24 +52,22 @@ Enquiry.schema.methods.sendNotificationEmail = function (callback) {
 
 	var enquiry = this;
 	var brand = keystone.get('brand');
+	var admins = 'najanra.mec@gmail.com';
 
-	keystone.list('User').model.find().where('isAdmin', true).exec(function (err, admins) {
-		if (err) return callback(err);
-		new keystone.Email({
-			templateName: 'enquiry-notification',
-			transport: 'mailgun',
-		}).send({
-			to: admins,
-			from: {
-				name: 'Consultoria Wave',
-				email: 'contato@consultoriawave.com',
-			},
-			subject: 'Novo contato do site',
-			enquiry: enquiry,
-			brand: brand,
-			layout: false,
-		}, callback);
-	});
+	new keystone.Email({
+		templateName: 'enquiry-notification',
+		transport: 'mailgun',
+	}).send({
+		to: admins,
+		from: {
+			name: 'Consultoria Wave',
+			email: 'contato@consultoriawave.com',
+		},
+		subject: 'Novo contato do site',
+		enquiry: enquiry,
+		brand: brand,
+		layout: false,
+	}, callback);
 };
 
 Enquiry.defaultSort = '-createdAt';
