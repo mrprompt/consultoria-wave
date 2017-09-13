@@ -17,6 +17,11 @@ Page.add({
 	},
 	categories: { type: Types.Relationship, ref: 'PageCategory', many: false },
 	images: { type: Types.CloudinaryImages },
+	meta: {
+		title: { type: String },
+		description: { type: String },
+		tags: { type: String },
+	},
 });
 
 Page.defaultColumns = 'name, menu|20%, categories|20%';
