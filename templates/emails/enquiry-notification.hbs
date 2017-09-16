@@ -1,7 +1,6 @@
-<h1>Hi %recipient.firstName%</h1>
-<p class="text-larger">An enquiry was just submitted to {{brand}}:</p>
+<p class="text-larger">Nova mensagem do site {{brand}}:</p>
 {{#if enquiry.email}}
-	<p class="text-larger">From
+	<p class="text-larger">De: 
 	{{#if enquiry.name.full}}
 		<strong>{{enquiry.name.full}}</strong>
 	{{/if}}
@@ -12,7 +11,7 @@
 	</p>
 
 	{{#if enquiry.phone}}
-		<p class="text-larger">Phone: {{enquiry.phone}}</p>
+		<p class="text-larger">Telefone: {{enquiry.phone}}</p>
 	{{/if}}
 
 	{{#if enquiry.enquiryType}}

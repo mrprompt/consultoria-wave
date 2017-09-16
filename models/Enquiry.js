@@ -16,6 +16,10 @@ Enquiry.add({
 	email: { type: Types.Email, required: true },
 	phone: { type: String },
 	enquiryType: { type: Types.Select, options: [
+		{ value: 'message', label: 'Isolamento Acústico' },
+		{ value: 'message', label: 'Tratamento Acústico' },
+		{ value: 'message', label: 'Certidão de Tratamento Acústico' },
+		{ value: 'message', label: 'Projeto Acústico' },
 		{ value: 'message', label: 'Apenas enviando uma mensagem' },
 		{ value: 'question', label: 'Tenho uma dúvida' },
 		{ value: 'other', label: 'Orçamento' },
