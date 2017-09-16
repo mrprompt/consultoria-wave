@@ -52,13 +52,17 @@ Enquiry.schema.methods.sendNotificationEmail = function (callback) {
 
 	var enquiry = this;
 	var brand = keystone.get('brand');
-	var admins = 'contato@consultoriawave.com';
 
 	new keystone.Email({
 		templateName: 'enquiry-notification',
 		transport: 'mailgun',
 	}).send({
-		to: admins,
+		to: [
+			{
+				email: 'contato@consultoriawave.com',
+				name: 'Consultoria Wave',
+			},
+		],
 		from: {
 			name: 'Consultoria Wave',
 			email: 'contato@consultoriawave.com',
