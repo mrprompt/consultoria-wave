@@ -22,6 +22,7 @@ Page.add({
 		description: { type: String },
 		tags: { type: String },
 	},
+	enableComment: { type: Boolean, label: 'Enable Comments' },
 });
 
 Page.defaultColumns = 'name, menu|20%, categories|20%';
