@@ -48,6 +48,8 @@ exports = module.exports = function (app) {
 	app.all('/pagina/:uri', function (req, res) {
 		res.redirect('/page/' + req.params.uri);
 	});
+	app.get('/blog/:category?', routes.views.blog);
+	app.get('/blog/post/:post', routes.views.post);
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);

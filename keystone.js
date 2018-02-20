@@ -63,6 +63,7 @@ keystone.set('nav', {
 	'Categorias': 'PageCategory',
 	'Páginas': 'pages',
 	'Contatos': 'enquiries',
+	'Blog': 'Post'
 });
 
 // Start Keystone to connect to your database and initialise the web server
