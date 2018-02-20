@@ -1,11 +1,6 @@
 {{!< default}}
 <div class="container">
 	<div class="row">
-		<h1>Blog</h1>
-	</div>
-</div>
-<div class="container">
-	<div class="row">
 		<div class="col-sm-8 col-md-9">
 			{{!-- <h4 class="text-weight-normal">Showing {{ data.posts.results.length}} post.</h4> --}}
 			<div class="blog">
@@ -19,13 +14,13 @@
 					<p>{{{content.brief}}}</p>
 					{{#if content.extended}}<p class="read-more"><a href="{{postUrl slug}}">Ver mais...</a></p>{{/if}}
 				</div>
+
+				<hr />
 				{{/each}}
 			</div>
 		</div>
 		<div class="col-sm-4 col-md-3">
-			<h2>Categorias</h2>
-			
-			<div style="margin-top: 70px;" class="list-group">
+			<div style="margin-top: 1em;" class="list-group">
 				<a href="/blog" class="active list-group-item">Todas as Categorias</a>
 				{{# each data.categories }}
 				<a href="{{categoryUrl key}}" class="false list-group-item">{{name}}</a>

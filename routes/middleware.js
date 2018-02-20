@@ -30,6 +30,11 @@ exports.initLocals = function (req, res, next) {
 			key: 'clientes',
 			href: '/clientes',
 		},
+		{
+			label: 'Blog',
+			key: 'blog',
+			href: '/blog',
+		},
 	];
 	
 	keystone.list('PageCategory').model.find().exec(function (err, results) {
