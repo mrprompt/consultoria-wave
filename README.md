@@ -14,3 +14,9 @@ MAILGUN_API_KEY
 MAILGUN_DOMAIN
 MONGO_URI
 ```
+
+## Rodando
+
+```
+npm start
+````
