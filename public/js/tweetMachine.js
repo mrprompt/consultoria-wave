@@ -132,11 +132,11 @@
 						});
                         // Usernames
 						text = text.replace(/@[A-Za-z0-9_]+/g, function (u) {
-							return '<a href="http://twitter.com/#!/' + u.replace(/^@/, '') + '" target="_blank">' + u + '</a>';
+							return '<a href="https://twitter.com/#!/' + u.replace(/^@/, '') + '" target="_blank">' + u + '</a>';
 						});
                         // Hashtags
 						text = text.replace(/#[A-Za-z0-9_\-]+/g, function (u) {
-							return '<a href="http://twitter.com/#!/search?q=' + u.replace(/^#/, '%23') + '" target="_blank">' + u + '</a>';
+							return '<a href="https://twitter.com/#!/search?q=' + u.replace(/^#/, '%23') + '" target="_blank">' + u + '</a>';
 						});
 						return text;
 					},
@@ -157,13 +157,13 @@
 
                         // Set the username
 						tweetObj.find('.username')
-                            .attr('href', "http://twitter.com/" + tweet.user.screen_name)
+                            .attr('href', "https://twitter.com/" + tweet.user.screen_name)
                             .attr('target', '_blank')
                             .html("" + tweet.user.screen_name);
 
                         // Set the timestamp
 						tweetObj.find('.time')
-                            .attr('href', "http://twitter.com/" + tweet.user.screen_name + "/status/" + tweet.id_str)
+                            .attr('href', "https://twitter.com/" + tweet.user.screen_name + "/status/" + tweet.id_str)
                             .attr('target', '_blank')
                             .html(tweetMachine.relativeTime(tweet.created_at))
                             // Save the created_at time as jQuery data so we can update it later

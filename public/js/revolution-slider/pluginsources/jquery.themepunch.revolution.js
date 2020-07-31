@@ -143,7 +143,7 @@
 												if (jQuery(this).attr('src').indexOf('you')>0 && addedyt==0) {
 													addedyt=1;
 													var s = document.createElement("script");
-													s.src = "http://www.youtube.com/player_api"; /* Load Player API*/
+													s.src = "https://www.youtube.com/player_api"; /* Load Player API*/
 													var before = document.getElementsByTagName("script")[0];
 													before.parentNode.insertBefore(s, before);
 												}
@@ -158,7 +158,7 @@
 												if (jQuery(this).attr('src').indexOf('vim')>0 && addedvim==0) {
 													addedvim=1;
 													var f = document.createElement("script");
-													f.src = "http://a.vimeocdn.com/js/froogaloop2.min.js"; /* Load Player API*/
+													f.src = "https://a.vimeocdn.com/js/froogaloop2.min.js"; /* Load Player API*/
 													var before = document.getElementsByTagName("script")[0];
 													before.parentNode.insertBefore(f, before);
 												}
