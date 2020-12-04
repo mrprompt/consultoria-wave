@@ -10,7 +10,7 @@
     "feedparser": "^2.2.10",
     "handlebars": "4.0.6",
     "handlebars-helpers": "^0.9.8",
-    "keystone": "4.0.0-beta.1",
+    "keystone": "^4.2.1",
     "keystone-email": "1.0.5",
     "keystone-express-sitemap": "^1.2.0",
     "lodash": "^4.17.11",
