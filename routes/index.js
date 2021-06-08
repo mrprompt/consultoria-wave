@@ -43,7 +43,6 @@ exports = module.exports = function (app) {
 	app.get('/', routes.views.index);
 	app.get('/portfolio', routes.views.portifolio);
 	app.get('/clientes', routes.views.clients);
-	app.all('/contato', routes.views.contact);
 	app.all('/page/:uri', routes.views.page);
 	app.all('/pagina/:uri', function (req, res) {
 		res.redirect('/page/' + req.params.uri);
