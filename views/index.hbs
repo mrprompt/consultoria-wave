@@ -1,0 +1,116 @@
+{{!< default}}
+
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container text-center">
+    <h1 class="display-4">Em manutenção</h1>
+    <p class="lead">Nosso site encontra-se em processo de manutenção, em breve retornaremos!</p>
+  </div>
+</div>
+
+<!-- Slogan Start-->
+<div class="slogan bottom-pad-small">
+	<div class="container">
+		<div class="row">
+			<div class="slogan-content text-center">
+				<div class="col-lg-12 col-md-12">
+					<h2 class="slogan-title">Conforto acústico é o nosso compromisso.</h2>
+					<h3>Desenvolvemos projetos acústicos de alta qualidade.</h3>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Slogan End-->
+
+<!-- Main Content start-->
+<div class="main-content">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-4 col-sm-4">
+				<div class="content-box big ch-item bottom-pad-small">
+					<div class="ch-info-wrap">
+						<div class="ch-info">
+							<div class="ch-info-front ch-img-1"><i class="fa fa-music"></i></div>
+							<div class="ch-info-back"><i class="fa fa-music"></i></div>
+						</div>
+					</div>
+					<div class="content-box-info">
+						<h3>Tratamento acústico</h3>
+						<p>
+							Ideal para adequar o ambiente conforme o uso, possibilitando conforto acústico.
+						</p>
+						<a href="/page/tratamento-acu-stico">Veja mais <i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4">
+				<div class="content-box big ch-item bottom-pad-small">
+					<div class="ch-info-wrap">
+						<div class="ch-info">
+							<div class="ch-info-front ch-img-1"><i class="fa fa-headphones"></i></div>
+							<div class="ch-info-back"><i class="fa fa-headphones"></i></div>
+						</div>
+					</div>
+					<div class="content-box-info">
+						<h3>Isolamento Acústico</h3>
+						<p>
+							Necessário para evitar incômodo devido a uma fonte sonora, principalmente quando algum equipamento está próximo de uma vizinhança.
+						</p>
+						<a href="/page/isolamento-acu-stico">Veja mais <i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4">
+				<div class="content-box big ch-item">
+					<div class="ch-info-wrap">
+						<div class="ch-info">
+							<div class="ch-info-front ch-img-1"><i class="fa fa-microphone"></i></div>
+							<div class="ch-info-back"><i class="fa fa-microphone"></i></div>
+						</div>
+					</div>
+					<div class="content-box-info">
+						<h3>Certidão de Tratamento Acústico</h3>
+						<p>
+							Este tipo de alvará é necessário para ambientes com fonte sonora. Um projeto acústico e laudo de ruído são necessários.
+						</p>
+						<a href="/page/certida-o-de-tratamento-acu-stico">Veja mais <i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Main Content end-->
+
+{{# if videos }}
+<!-- Recent works start-->
+<div class="bottom-pad">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 animate_afl d1">
+				<h3 class="title">Vídeos</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-xs-12">
+				<div class="row portfolio-pad">
+					{{#each videos}}
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item animate_afc d3">
+						<div class="portfolio-item">
+							<a href="{{ this.link }}" class="portfolio-item-link" data-rel="prettyPhoto" >
+								<span class="portfolio-item-hover"></span><span class="fullscreen"><i class="fa fa-search"></i></span><img src="{{ this.imagem }}" alt=" "/>
+							</a>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					{{/each}}
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Recent work end-->
+{{/if}}
