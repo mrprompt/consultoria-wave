@@ -1,0 +1,25 @@
+title: Consultoria Wave
+description: Consultoria Wave
+url: "https://www.consultoriawave.com"
+baseurl: "/"
+city: "Florianópolis-SC"
+encoding: UTF-8
+highlighter: rouge
+timezone: UTC
+permalink: pretty
+paginate: 7
+pagination_path: "/:num"
+google_analytics: ""
+
+exclude:
+  - bin
+  - docker-compose.yml
+  - template
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-feed
+
+sass:
+  style: compressed
