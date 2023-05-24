@@ -1,7 +1,7 @@
 title: Consultoria Wave
-description: Consultoria Wave
+description: A empresa possui corpo técnico capacitado para solucionar a necessidade do cliente, visando o conforto acústico em qualquer tipo de ambiente, seja residencial, industrial ou de lazer.
 url: "https://www.consultoriawave.com"
-baseurl: "/"
+baseurl: ""
 city: "Florianópolis-SC"
 encoding: UTF-8
 highlighter: rouge
@@ -9,7 +9,7 @@ timezone: UTC
 permalink: pretty
 paginate: 7
 pagination_path: "/:num"
-google_analytics: ""
+google_analytics: "UA-105738007-1"
 
 exclude:
   - bin
@@ -23,3 +23,12 @@ plugins:
 
 sass:
   style: compressed
+
+empresa:
+  telefone: 
+    link: 005548999076388
+    formated: +55 48 99907-6388
+  email: contato@consultoriawave.com
+  social:
+    facebook: CONSULTORIAWAVE
+    instagram: waveconsultoria
