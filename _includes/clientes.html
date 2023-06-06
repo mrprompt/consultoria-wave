@@ -1,0 +1,11 @@
+<div id="client-carousel" class="client-carousel carousel slide">
+    <div class="carousel-inner">
+        <div class="item active">
+            {% for cliente in site.data.clientes %}
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 item animate_afc d1">
+                <div class="item-inner"><a href="{{ cliente.url }}"><img alt="{{ cliente.nome }}" src="{{ site.baseurl }}/img/clientes/{{ cliente.logo }}"></a></div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

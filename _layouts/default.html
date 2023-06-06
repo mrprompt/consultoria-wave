@@ -127,10 +127,10 @@
                   <!-- Menu Start -->
                   <nav class="collapse navbar-collapse menu">
                      <ul class="nav navbar-nav sf-menu">
-                        <li><a id="current" href="{{ site.baseurl }}/">Início</a></li>
-                        <li><a href="{{ site.baseurl }}/profissional" class="sf-with-ul">Profissional</a></li>
-                        <li><a href="{{ site.baseurl }}/blog" class="sf-with-ul">Blog</a></li>
-                        <li><a href="{{ site.baseurl }}/contato" class="sf-with-ul">Contato</a></li>
+                        <li><a href="{{ site.baseurl }}/" {% if page.active == "inicio" %} id="current" {% endif %}>Início</a></li>
+                        <li><a href="{{ site.baseurl }}/servicos" class="sf-with-ul" {% if page.active == "servicos" %} id="current" {% endif %}>Serviços</a></li>
+                        <li><a href="{{ site.baseurl }}/blog" class="sf-with-ul" {% if page.active == "blog" %} id="current" {% endif %}>Blog</a></li>
+                        <li><a href="{{ site.baseurl }}/contato" class="sf-with-ul" {% if page.active == "contato" %} id="current" {% endif %}>Contato</a></li>
                      </ul>
                   </nav>
                   <!-- Menu End --> 
