@@ -641,6 +641,7 @@ $("#contact").submit(function (e) {
     return false;
 });
 
+/*
 var maskBehavior = function (val) {
 		return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
 	},
@@ -650,3 +651,4 @@ var maskBehavior = function (val) {
 	};
 
 $('.phone').mask(maskBehavior, options);
+*/
