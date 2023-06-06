@@ -1,35 +1,37 @@
-<!-- <div class="portfolio-item">
-    <a
-      href="{{ site.baseurl }}/img/portfolio/portfolio-1.jpg"
-      class="portfolio-item-link"
-      data-rel="prettyPhoto"
-    >
-      <span class="portfolio-item-hover"></span>
-      <span class="fullscreen"
-        ><i class="fa fa-search"></i></span
-      ><img
-        src="{{ site.baseurl }}/img/portfolio/portfolio-1.jpg"
-        alt=" "
-      />
-    </a>
-    <div class="portfolio-item-title">
-      <a href="single-project.html">Insta Genius</a>
-      <p>Design / Development</p>
-    </div>
-    <div class="clearfix"></div>
-  </div>
-</div> -->
+<ul>
+    {% for video in site.data.videos %}
+    <li class="">
+      <div class="blog-showcase-thumb col-lg-4">
+        <div class="post-body">
+          <a
+            class="post-item-link"
+            href="https://www.youtube.com/watch?v={{ video.id }}"
+            data-rel="prettyPhoto"
+            ><span class="post-item-hover"></span
+            ><span class="fullscreen"><i class="fa fa-search"></i></span
+            ><img
+              alt=""
+              src="https://img.youtube.com/vi/{{ video.id }}/0.jpg"
+          /></a>
+        </div>
+      </div>
+      <div class="blog-showcase-extra-info col-lg-4">
+        <h4><a href="https://www.youtube.com/watch?v={{ video.id }}" class="title">{{ video.titulo }}</a></h4>
+        <a href="https://www.youtube.com/watch?v={{ video.id }}">Veja na íntegra <i class="fa fa-angle-double-right"></i></a>
+      </div>
+    </li>
+    {% endfor %}
+</ul>
 
-{% for video in site.data.videos %}
+<!--
 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item animate_afc d2">
     <div class="portfolio-item">
-        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video.id }}" title="{{ video.titulo }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
-        <a href="https://www.youtube.com/?v={{ video.id }}" target="_blank"><img src="https://img.youtube.com/vi/{{ video.id }}/0.jpg" alt="{{ video.titulo }}"></a>
+        <a href="https://www.youtube.com/watch?v={{ video.id }}" target="_blank"><img src="https://img.youtube.com/vi/{{ video.id }}/0.jpg" alt="{{ video.titulo }}"></a>
 
         <div class="portfolio-item-title">
-            <a href="https://www.youtube.com/?v={{ video.id }}" target="_blank">{{ video.titulo }}</a>
+            <a href="https://www.youtube.com/watch?v={{ video.id }}" target="_blank">{{ video.titulo }}</a>
         </div>
         <div class="clearfix"></div>
     </div>
 </div>
-{% endfor %}
+-->
