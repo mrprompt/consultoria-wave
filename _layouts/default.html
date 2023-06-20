@@ -64,8 +64,8 @@
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments)};
 
-            gtag('js', new Date());
-			gtag('config', '{{ site.google_analytics }}');
+         gtag('js', new Date());
+         gtag('config', '{{ site.google_analytics }}');
 		</script>
    </head>
    <body class="boxed home-3">
@@ -129,7 +129,9 @@
                      <ul class="nav navbar-nav sf-menu">
                         <li><a href="{{ site.baseurl }}/" {% if page.active == "inicio" %} id="current" {% endif %}>Início</a></li>
                         <li><a href="{{ site.baseurl }}/servicos" class="sf-with-ul" {% if page.active == "servicos" %} id="current" {% endif %}>Serviços</a></li>
-                        <li><a href="{{ site.baseurl }}/blog" class="sf-with-ul" {% if page.active == "blog" %} id="current" {% endif %}>Blog</a></li>
+                        <li><a href="{{ site.baseurl }}/profissional" class="sf-with-ul" {% if page.active == "profissional" %} id="current" {% endif %}>Profissional</a></li>
+                        <li><a href="{{ site.baseurl }}/equipamentos" class="sf-with-ul" {% if page.active == "equipamentos" %} id="current" {% endif %}>Equipamentos</a></li>
+                        <li><a href="{{ site.baseurl }}/acustica-de-salas" class="sf-with-ul" {% if page.active == "acustica-de-salas" %} id="current" {% endif %}>Acústica de Salas</a></li>
                         <li><a href="{{ site.baseurl }}/contato" class="sf-with-ul" {% if page.active == "contato" %} id="current" {% endif %}>Contato</a></li>
                      </ul>
                   </nav>
@@ -164,8 +166,7 @@
                            <li>
                               <i class="fa fa-map-marker"></i>
                               <p> 
-                                <strong class="contact-pad">Endereço:</strong> Av. Santa Catarina, n° 1619<br>
-                                Balneário, Florianópolis SC
+                                <strong class="contact-pad">Endereço:</strong> {{ site.endereco }}
                               </p>
                            </li>
                            <li>
