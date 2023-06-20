@@ -1,0 +1,29 @@
+- titulo: Consultoria
+  descricao: Consultoria de Projetos Acústicos
+  icone: arrows-alt
+  slug: consultoria
+
+- titulo: Projeto
+  descricao: Projeto de Isolamento e Condicionamento Acústico
+  icone: eye
+  slug: projeto
+
+- titulo: Laudo
+  descricao: Laudo de Ruído Ambiental/ Poluição Sonora
+  icone: edit
+  slug: laudo
+
+- titulo: Avaliação
+  descricao: Avaliação Acústica de Ambientes
+  icone: leaf
+  slug: avaliacao
+
+- titulo: Material Acústico
+  descricao: Avaliação e Desenvolvimento de Materiais Acústicos
+  icone: cog
+  slug: material-acustico
+
+- titulo: Estúdio Musical
+  descricao: Estúdio musical
+  icone: search
+  slug: estudio
