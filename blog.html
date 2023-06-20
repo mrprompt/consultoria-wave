@@ -33,19 +33,36 @@ active: blog
        <div class="container">
             <!-- start: Post -->
             <div class="row">
-                {% for post in paginator.posts %}
-                    <div class="post-content col-lg-12 col-xs-12">
-                        <div class="post-title">
-                            <h2 class="nobreak"><a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a></h2>
+               <div class="posts-block col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
+                  {% for post in site.posts %}
+                     <article class="post hentry">
+                        <div class="post-content-wrap">
+                           <header class="post-header">
+                              <div class="post-date">
+                                 <a class="date" href="{{ post.url | prepend: site.url }}"><strong>{{ post.date | date: '%d' }}</strong><i>{{ post.date | date: '%m/%Y' }}</i></a>
+                              </div>
+                              <h3 class="content-title">{{ post.title }}</h3>
+                              <div class="blog-entry-meta">
+                                 <div class="blog-entry-meta-author">
+                                    <i class="fa fa-user"></i>
+                                    <a href="{{ site.baseurl }}/profissional/" class="blog-entry-meta-author">Leandro Barbosa</a>
+                                 </div>
+                              </div>
+                           </header>
+                           <div class="post-content">
+                              <p>
+                                 {{ post.excerpt | strip_html }}
+                              </p>
+                              <p>
+                                 <a href="{{ post.url | prepend: site.url }}" class="link">[ leia mais... ]</a>
+                              </p>
+                           </div>
                         </div>
-                        <div class="post-description">
-                            {{ post.content }}
-                        </div>
-                        <div class="post-meta">
-                            <span><i class="fa fa-calendar"></i> Data: {{ post.date | date: '%d/%m/%Y' }}</span><br>
-                        </div>
-                    </div>
-                {% endfor %}
+                    </article>
+
+                    <div class="blog-divider"></div>
+                  {% endfor %}
+                </div>
             </div>
             <!-- end: Post -->
 
