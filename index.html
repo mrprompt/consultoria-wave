@@ -101,116 +101,26 @@ active: inicio
 <div class="main-content">
   <div class="container">
     <div class="row">
+      {% for servico in site.data.servicos %}
       <div class="col-lg-4 col-md-4 col-sm-4 bottom-pad">
         <div class="content-box ch-item">
           <div class="ch-info-wrap">
             <div class="ch-info">
               <div class="ch-info-front ch-img-1">
-                <i class="fa fa-arrows-alt"></i>
+                <i class="fa fa-{{ servico.icone }}"></i>
               </div>
               <div class="ch-info-back">
-                <i class="fa fa-arrows-alt"></i>
+                <i class="fa fa-{{ servico.icone }}"></i>
               </div>
             </div>
           </div>
           <div class="content-box-info">
-            <h3>Consultoria</h3>
-            <p>Consultoria de Projetos Acústicos</p>
+            <h3>{{ servico.titulo }} </h3>
+            <p>{{ servico.descricao }}</p>
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-4 col-sm-4 bottom-pad">
-        <div class="content-box ch-item">
-          <div class="ch-info-wrap">
-            <div class="ch-info">
-              <div class="ch-info-front ch-img-1">
-                <i class="fa fa-eye"></i>
-              </div>
-              <div class="ch-info-back">
-                <i class="fa fa-eye"></i>
-              </div>
-            </div>
-          </div>
-          <div class="content-box-info">
-            <h3>Projeto</h3>
-            <p>Projeto de Isolamento e Condicionamento Acústico</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-4 bottom-pad">
-        <div class="content-box ch-item">
-          <div class="ch-info-wrap">
-            <div class="ch-info">
-              <div class="ch-info-front ch-img-1">
-                <i class="fa fa-edit"></i>
-              </div>
-              <div class="ch-info-back">
-                <i class="fa fa-edit"></i>
-              </div>
-            </div>
-          </div>
-          <div class="content-box-info">
-            <h3>Laudo</h3>
-            <p>Laudo de Ruído Ambiental/ Poluição Sonora</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-4 col-md-4 col-sm-4">
-        <div class="content-box ch-item">
-          <div class="ch-info-wrap">
-            <div class="ch-info">
-              <div class="ch-info-front ch-img-1">
-                <i class="fa fa-leaf"></i>
-              </div>
-              <div class="ch-info-back">
-                <i class="fa fa-leaf"></i>
-              </div>
-            </div>
-          </div>
-          <div class="content-box-info">
-            <h3>Avaliação</h3>
-            <p>Avaliação Acústica de Ambientes</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-4">
-        <div class="content-box ch-item">
-          <div class="ch-info-wrap">
-            <div class="ch-info">
-              <div class="ch-info-front ch-img-1">
-                <i class="fa fa-cog"></i>
-              </div>
-              <div class="ch-info-back">
-                <i class="fa fa-cog"></i>
-              </div>
-            </div>
-          </div>
-          <div class="content-box-info">
-            <h3>Material Acústico</h3>
-            <p>Avaliação e Desenvolvimento de Materiais Acústicos</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-4">
-        <div class="content-box ch-item">
-          <div class="ch-info-wrap">
-            <div class="ch-info">
-              <div class="ch-info-front ch-img-1">
-                <i class="fa fa-search"></i>
-              </div>
-              <div class="ch-info-back">
-                <i class="fa fa-search"></i>
-              </div>
-            </div>
-          </div>
-          <div class="content-box-info">
-            <h3>Estúdio Musical</h3>
-            <p>Estúdio musical.</p>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </div>
@@ -238,10 +148,10 @@ active: inicio
           <div id="portfolio-carousel" class="portfolio-carousel slide">
             <div class="carousel-inner">
               <div class="item active">
-				{% include portifolio_0.html %}
+				        {% include portifolio_0.html %}
               </div>
-			  <div class="item">
-				{% include portifolio_1.html %}
+			        <div class="item">
+				        {% include portifolio_1.html %}
               </div>
             </div>
             <div class="clearfix"></div>
