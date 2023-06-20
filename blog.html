@@ -1,0 +1,62 @@
+---
+layout: default
+title: Blog
+active: blog
+---
+<!-- Content Start -->
+<div id="main">
+    <!-- Title, Breadcrumb Start-->
+    <div class="breadcrumb-wrapper">
+       <div class="container">
+          <div class="row">
+             <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                <h2 class="title">Blog</h2>
+             </div>
+             <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                <div class="breadcrumbs pull-right">
+                   <ul>
+                      <ul>
+                         <li>Você está aqui:</li>
+                         <li><a href="{{ site.baseurl }}/">Início</a></li>
+                         <li>Blog</li>
+                      </ul>
+                   </ul>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+    <!-- Title, Breadcrumb End-->
+ 
+    <!-- Main Content start-->
+    <div class="content">
+       <div class="container">
+            <!-- start: Post -->
+            <div class="row">
+                {% for post in paginator.posts %}
+                    <div class="post-content col-lg-12 col-xs-12">
+                        <div class="post-title">
+                            <h2 class="nobreak"><a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a></h2>
+                        </div>
+                        <div class="post-description">
+                            {{ post.content }}
+                        </div>
+                        <div class="post-meta">
+                            <span><i class="fa fa-calendar"></i> Data: {{ post.date | date: '%d/%m/%Y' }}</span><br>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <!-- end: Post -->
+
+            <!--start: Row -->
+            <div class="row">
+                {% include pagination.html %}
+            </div>
+            <!--end: Row -->
+       </div>
+    </div>
+    <!-- Main Content end-->
+ </div>
+ <!-- Content End -->
+          
