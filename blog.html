@@ -39,7 +39,7 @@ active: blog
                         <div class="post-content-wrap">
                            <header class="post-header">
                               <div class="post-date">
-                                 <a class="date" href="{{ post.url | prepend: site.url }}"><strong>{{ post.date | date: '%d' }}</strong><i>{{ post.date | date: '%m/%Y' }}</i></a>
+                                 <a class="date" href="{{ post.url | prepend: site.baseurl }}"><strong>{{ post.date | date: '%d' }}</strong><i>{{ post.date | date: '%m/%Y' }}</i></a>
                               </div>
                               <h3 class="content-title">{{ post.title }}</h3>
                               <div class="blog-entry-meta">
@@ -54,7 +54,7 @@ active: blog
                                  {{ post.excerpt | strip_html }}
                               </p>
                               <p>
-                                 <a href="{{ post.url | prepend: site.url }}" class="link">[ leia mais... ]</a>
+                                 <a href="{{ post.url | prepend: site.baseurl }}" class="link">[ leia mais... ]</a>
                               </p>
                            </div>
                         </div>
