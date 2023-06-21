@@ -1,0 +1,32 @@
+---
+layout: blog
+paginate: true
+---
+{% for post in paginator.posts %}
+   <article class="post hentry">
+      <div class="post-content-wrap">
+         <header class="post-header">
+            <div class="post-date">
+               <a class="date" href="{{ post.url | prepend: site.baseurl }}"><strong>{{ post.date | date: '%d' }}</strong><i>{{ post.date | date: '%m/%Y' }}</i></a>
+            </div>
+            <h3 class="content-title">{{ post.title }}</h3>
+            <div class="blog-entry-meta">
+               <div class="blog-entry-meta-author">
+                  <i class="fa fa-user"></i>
+                  <a href="{{ site.baseurl }}/profissional/" class="blog-entry-meta-author">Leandro Barbosa</a>
+               </div>
+            </div>
+         </header>
+         <div class="post-content">
+            <p>
+               {{ post.excerpt | strip_html }}
+            </p>
+            <p>
+               <a href="{{ post.url | prepend: site.baseurl }}" class="link">[ leia mais... ]</a>
+            </p>
+         </div>
+      </div>
+   </article>
+
+   <div class="blog-divider"></div>
+{% endfor %}
