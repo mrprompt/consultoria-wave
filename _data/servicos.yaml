@@ -1,29 +1,29 @@
 - titulo: Consultoria
-  descricao: Consultoria de Projetos Acústicos
+  descricao: Desenvolvimento de Soluções Acústicas e Vibrações
   icone: arrows-alt
   slug: consultoria
 
 - titulo: Projeto
-  descricao: Projeto de Isolamento e Condicionamento Acústico
+  descricao: Dimensionamento de elementos para Tratamento Acústico
   icone: eye
   slug: projeto
 
 - titulo: Laudo
-  descricao: Laudo de Ruído Ambiental/ Poluição Sonora
+  descricao: Avaliação de Ruído Ambiental/Poluição sonora
   icone: edit
   slug: laudo
 
 - titulo: Avaliação
-  descricao: Avaliação Acústica de Ambientes
+  descricao: Realização de medições in loco de Acústica de Salas
   icone: leaf
   slug: avaliacao
 
 - titulo: Material Acústico
-  descricao: Avaliação e Desenvolvimento de Materiais Acústicos
+  descricao: Determinação de Propriedades Acústicas em Laboratório
   icone: cog
   slug: material-acustico
 
-- titulo: Estúdio Musical
-  descricao: Estúdio musical
+- titulo: Ambiente musical
+  descricao: Projeto Acústico de estúdio musical, sala de mixagem e rádio
   icone: search
   slug: estudio
