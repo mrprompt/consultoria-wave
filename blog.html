@@ -1,79 +1,32 @@
 ---
-layout: default
+layout: blog
 title: Blog
-active: blog
 ---
-<!-- Content Start -->
-<div id="main">
-    <!-- Title, Breadcrumb Start-->
-    <div class="breadcrumb-wrapper">
-       <div class="container">
-          <div class="row">
-             <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
-                <h2 class="title">Blog</h2>
-             </div>
-             <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
-                <div class="breadcrumbs pull-right">
-                   <ul>
-                      <ul>
-                         <li>Você está aqui:</li>
-                         <li><a href="{{ site.baseurl }}/">Início</a></li>
-                         <li>Blog</li>
-                      </ul>
-                   </ul>
-                </div>
-             </div>
-          </div>
-       </div>
-    </div>
-    <!-- Title, Breadcrumb End-->
- 
-    <!-- Main Content start-->
-    <div class="content">
-       <div class="container">
-            <!-- start: Post -->
-            <div class="row">
-               <div class="posts-block col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                  {% for post in site.posts %}
-                     <article class="post hentry">
-                        <div class="post-content-wrap">
-                           <header class="post-header">
-                              <div class="post-date">
-                                 <a class="date" href="{{ post.url | prepend: site.baseurl }}"><strong>{{ post.date | date: '%d' }}</strong><i>{{ post.date | date: '%m/%Y' }}</i></a>
-                              </div>
-                              <h3 class="content-title">{{ post.title }}</h3>
-                              <div class="blog-entry-meta">
-                                 <div class="blog-entry-meta-author">
-                                    <i class="fa fa-user"></i>
-                                    <a href="{{ site.baseurl }}/profissional/" class="blog-entry-meta-author">Leandro Barbosa</a>
-                                 </div>
-                              </div>
-                           </header>
-                           <div class="post-content">
-                              <p>
-                                 {{ post.excerpt | strip_html }}
-                              </p>
-                              <p>
-                                 <a href="{{ post.url | prepend: site.baseurl }}" class="link">[ leia mais... ]</a>
-                              </p>
-                           </div>
-                        </div>
-                    </article>
-
-                    <div class="blog-divider"></div>
-                  {% endfor %}
-                </div>
+{% for post in site.posts %}
+   <article class="post hentry">
+      <div class="post-content-wrap">
+         <header class="post-header">
+            <div class="post-date">
+               <a class="date" href="{{ post.url | prepend: site.baseurl }}"><strong>{{ post.date | date: '%d' }}</strong><i>{{ post.date | date: '%m/%Y' }}</i></a>
             </div>
-            <!-- end: Post -->
-
-            <!--start: Row -->
-            <div class="row">
-                {% include pagination.html %}
+            <h3 class="content-title">{{ post.title }}</h3>
+            <div class="blog-entry-meta">
+               <div class="blog-entry-meta-author">
+                  <i class="fa fa-user"></i>
+                  <a href="{{ site.baseurl }}/profissional/" class="blog-entry-meta-author">Leandro Barbosa</a>
+               </div>
             </div>
-            <!--end: Row -->
-       </div>
-    </div>
-    <!-- Main Content end-->
- </div>
- <!-- Content End -->
-          
+         </header>
+         <div class="post-content">
+            <p>
+               {{ post.excerpt | strip_html }}
+            </p>
+            <p>
+               <a href="{{ post.url | prepend: site.baseurl }}" class="link">[ leia mais... ]</a>
+            </p>
+         </div>
+      </div>
+   </article>
+
+   <div class="blog-divider"></div>
+{% endfor %}

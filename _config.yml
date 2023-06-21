@@ -11,11 +11,12 @@ permalink: pretty
 paginate: 7
 pagination_path: "/:num"
 google_analytics: "UA-105738007-1"
+formspree_id: "mpzevbjq"
 
 exclude:
-  - bin
-  - docker-compose.yml
+  - _antigas
   - template
+  - docker-compose.yml
 
 plugins:
   - jekyll-sitemap
