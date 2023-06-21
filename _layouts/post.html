@@ -1,273 +1,45 @@
-<!DOCTYPE html>
-<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
-<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
-<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
-   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-      <title>{{ site.title }}</title>
-
-      <meta name="description" content="{{ site.description }}">
-      <meta property="og:image" content="{{ site.baseurl }}/img/Wave.png">
-      <meta name="twitter:image:src" content="{{ site.baseurl }}/img/Wave.png">
-      <meta name="keywords" content="{{ site.keywords }}">
-      <meta name="author" content="Thiago Paes - https://github.com/mrprompt">
-
-      <!-- Mobile Metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-      <!-- Google Fonts -->
-      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-      <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-
-      <!-- Library CSS -->
-      <link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap.css">
-      <link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap-theme.css">
-      <link rel="stylesheet" href="{{ site.baseurl }}/css/fonts/font-awesome/css/font-awesome.css">
-      <link rel="stylesheet" href="{{ site.baseurl }}/css/animations.css" media="screen">
-      <link rel="stylesheet" href="{{ site.baseurl }}/css/superfish.css" media="screen">
-      <link rel="stylesheet" href="{{ site.baseurl }}/css/revolution-slider/css/settings.css" media="screen">
-      <link rel="stylesheet" href="{{ site.baseurl }}/css/prettyPhoto.css" media="screen">
-
-      <!-- Theme CSS -->
-      <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
-
-      <!-- Skin -->
-      <link rel="stylesheet" href="{{ site.baseurl }}/css/colors/blue.css" class="colors">
-
-      <!-- Responsive CSS -->
-      <link rel="stylesheet" href="{{ site.baseurl }}/css/theme-responsive.css">
-
-      <!-- Switcher CSS -->
-      <link href="{{ site.baseurl }}/css/switcher.css" rel="stylesheet">
-      <link href="{{ site.baseurl }}/css/spectrum.css" rel="stylesheet">
-
-      <!-- Favicons -->
-      <link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon/favicon-16x16.png" type="image/x-icon">
-      <link rel="apple-touch-icon" href="{{ site.baseurl }}/img/ico/apple-touch-icon.png">
-      <link rel="apple-touch-icon" sizes="72x72" href="{{ site.baseurl }}/img/ico/apple-touch-icon-72.png">
-      <link rel="apple-touch-icon" sizes="114x114" href="{{ site.baseurl }}/img/ico/apple-touch-icon-114.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="{{ site.baseurl }}/img/ico/apple-touch-icon-144.png">
-      <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
-      <!--[if lt IE 9]>
-          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="{{ site.baseurl }}/js/respond.min.js"></script>
-      <![endif]-->
-      <!--[if IE]>
-        <link rel="stylesheet" href="{{ site.baseurl }}/css/ie.css">
-      <![endif]-->
-		
-		<!-- Global Site Tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments)};
-
-         gtag('js', new Date());
-         gtag('config', '{{ site.google_analytics }}');
-		</script>
-   </head>
-   <body class="boxed home-3">
-      <div class="page-mask">
-            <div class="page-loader"> 
-                <div class="spinner"></div>
-                Carregando...
-            </div>
-      </div>
-
-      <div class="wrap">
-         <!-- Header Start -->
-         <header id="header">
-            <!-- Header Top Bar Start -->
-            <div class="top-bar">
-               <div class="slidedown collapse">
-                  <div class="container">
-                     <div class="phone-email pull-left">
-                        <a href="tel:{{ site.empresa.telefone.link }}"><i class="fa fa-phone"></i> Ligue : {{ site.empresa.telefone.formated }}</a>
-                        <a href="mailto:{{ site.empresa.email }}"><i class="fa fa-envelope"></i> Email : {{ site.empresa.email }}</a>
-                     </div>
-                     <div class="pull-right">
-                        <ul class="social pull-left">
-                            <li class="facebook"><a href="https://www.facebook.com/{{ site.empresa.social.facebook }}"><i class="fa fa-facebook"></i></a></li>
-                            <li class="instagram"><a href="https://www.instagram.com/{{ site.empresa.social.instagram }}"><i class="fa fa-instagram"></i></a></li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <!-- Header Top Bar End -->
-
-            <!-- Main Header Start -->
-            <div class="main-header">
-               <div class="container">
-                  <!-- TopNav Start -->
-                  <div class="topnav navbar-header">
-                     <a class="navbar-toggle down-button" data-toggle="collapse" data-target=".slidedown">
-                        <i class="fa fa-angle-down fa fa-current"></i>
-                     </a> 
-                  </div>
-                  <!-- TopNav End -->
-                  <!-- Logo Start -->
-                  <div class="logo pull-left">
-                     <h1>
-                        <a href="{{ site.baseurl }}/">
-                            <img src="{{ site.baseurl }}/img/Wave_logo_cinza_site.png" alt="Wave" width="197" height="60" class="top-logo">
-                        </a>
-                     </h1>
-                  </div>
-                  <!-- Logo End -->
-                  <!-- Mobile Menu Start -->
-                  <div class="mobile navbar-header">
-                     <a class="navbar-toggle" data-toggle="collapse" href=".navbar-collapse">
-                        <i class="fa fa-bars fa-2x"></i>
-                     </a> 
-                  </div>
-                  <!-- Mobile Menu End -->
-                  <!-- Menu Start -->
-                  <nav class="collapse navbar-collapse menu">
-                     <ul class="nav navbar-nav sf-menu">
-                        <li><a href="{{ site.baseurl }}/" {% if page.active == "inicio" %} id="current" {% endif %}>Início</a></li>
-                        <li><a href="{{ site.baseurl }}/servicos" class="sf-with-ul" {% if page.active == "servicos" %} id="current" {% endif %}>Serviços</a></li>
-                        <li><a href="{{ site.baseurl }}/profissional" class="sf-with-ul" {% if page.active == "profissional" %} id="current" {% endif %}>Profissional</a></li>
-                        <li><a href="{{ site.baseurl }}/equipamentos" class="sf-with-ul" {% if page.active == "equipamentos" %} id="current" {% endif %}>Equipamentos</a></li>
-                        <li><a href="{{ site.baseurl }}/acustica-de-salas" class="sf-with-ul" {% if page.active == "acustica-de-salas" %} id="current" {% endif %}>Acústica de Salas</a></li>
-                        <li><a href="{{ site.baseurl }}/blog" class="sf-with-ul" {% if page.active == "blog" %} id="current" {% endif %}>Blog</a></li>
-                        <li><a href="{{ site.baseurl }}/contato" class="sf-with-ul" {% if page.active == "contato" %} id="current" {% endif %}>Contato</a></li>
-                     </ul>
-                  </nav>
-                  <!-- Menu End --> 
-               </div>
-            </div>
-            <!-- Main Header End -->
-         </header>
-         <!-- Header End --> 
-
-         <!-- Content Start -->
-         <div id="main">
-            <!-- Title, Breadcrumb Start-->
-            <div class="breadcrumb-wrapper">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
-                        <h2 class="title">Blog</h2>
-                     </div>
-                     <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
-                        <div class="breadcrumbs pull-right">
-                           <ul>
-                              <ul>
-                                 <li>Você está aqui:</li>
-                                 <li><a href="{{ site.baseurl }}/">Início</a></li>
-                                 <li>Blog</li>
-                              </ul>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <!-- Title, Breadcrumb End-->
-
-            <!-- Main Content start-->
-            <div class="content">
-               <div class="container">
-               <div class="container">
-                  <div class="row">
-                     <div class="posts-block col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <article>
-                           <h3 class="title">{{ page.title }}</h3>
-                           <div class="post-content">
-                              {{ content }}
-                           </div>
-                        </article>
-                     </div>
-                  </div>
-                  <div class="divider"></div>
-               </div>
-               </div>
-            </div>
-            <!-- Main Content end-->
+---
+layout: default
+---
+<!-- Title, Breadcrumb Start-->
+<div class="breadcrumb-wrapper">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+            <h2 class="title">Blog</h2>
          </div>
-         <!-- Content End -->
-
-         <!-- Footer Start -->
-         <footer id="footer">
-            <!-- Footer Top Start -->
-            <div class="footer-top">
-               <div class="container">
-                  <div class="row">
-                     <section class="col-lg-6 col-md-6 col-xs-12 col-sm-6 footer-one">
-                        <h3>Sobre</h3>
-                        <p> 
-                           {{ site.description }}
-                        </p>
-                     </section>
-                     <section class="col-lg-6 col-md-6 col-xs-12 col-sm-6 footer-three">
-                        <h3>Entre em contato</h3>
-                        <ul class="contact-us">
-                           <li>
-                              <i class="fa fa-map-marker"></i>
-                              <p> 
-                                <strong class="contact-pad">Endereço:</strong> {{ site.endereco }}
-                              </p>
-                           </li>
-                           <li>
-                              <i class="fa fa-phone"></i>
-                              <p><strong>Telefone:</strong> {{ site.empresa.telefone.formated }}</p>
-                           </li>
-                           <li>
-                              <i class="fa fa-envelope"></i>
-                              <p><strong>Email:</strong><a href="mailto:{{ site.empresa.email }}">{{ site.empresa.email }}</a></p>
-                           </li>
-                        </ul>
-                     </section>
-                  </div>
-               </div>
+         <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+            <div class="breadcrumbs pull-right">
+               <ul>
+                  <ul>
+                     <li>Você está aqui:</li>
+                     <li><a href="{{ site.baseurl }}/">Início</a></li>
+                     <li>Blog</li>
+                  </ul>
+               </ul>
             </div>
-            <!-- Footer Top End --> 
-
-            <!-- Footer Bottom Start -->
-            <div class="footer-bottom">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 "> &copy; Copyright {{ 'now' | date: "%Y" }} by <a href="{{ site.baseurl }}/">Consultoria Wave</a>. Todos os direitos reservados. </div>
-                     <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
-                        <ul class="social social-icons-footer-bottom">
-                           <li class="facebook"><a href="https://www.facebook.com/{{ site.empresa.social.facebook }}" data-toggle="tooltip" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                           <li class="instagram"><a href="https://www.instagram.com/{{ site.empresa.social.instagram }}" data-toggle="tooltip" title="Instagram"><i class="fa fa-instagram"></i></a></li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <!-- Footer Bottom End --> 
-         </footer>
-
-         <!-- Scroll To Top --> 
-         <a href="{{ site.baseurl }}/#" class="scrollup"><i class="fa fa-angle-up"></i></a>
+         </div>
       </div>
-      <!-- Wrap End -->
-      
-      <!-- The Scripts -->
-      <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
-      <script src="{{ site.baseurl }}/js/bootstrap.js"></script>
-      <script src="{{ site.baseurl }}/js/jquery.parallax.js"></script>
-      <script src="{{ site.baseurl }}/js/jquery.wait.js"></script> 
-      <script src="{{ site.baseurl }}/js/modernizr-2.6.2.min.js"></script> 
-      <script src="{{ site.baseurl }}/js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
-      <script src="{{ site.baseurl }}/js/jquery.nivo.slider.pack.js"></script>
-      <script src="{{ site.baseurl }}/js/jquery.prettyPhoto.js"></script>
-      <script src="{{ site.baseurl }}/js/superfish.js"></script>
-      <script src="{{ site.baseurl }}/js/tweetMachine.js"></script>
-      <script src="{{ site.baseurl }}/js/tytabs.js"></script>
-      <script src="{{ site.baseurl }}/js/jquery.gmap.min.js"></script>
-      <script src="{{ site.baseurl }}/js/circularnav.js"></script>
-      <script src="{{ site.baseurl }}/js/jquery.sticky.js"></script>
-      <script src="{{ site.baseurl }}/js/jflickrfeed.js"></script>
-      <script src="{{ site.baseurl }}/js/imagesloaded.pkgd.min.js"></script>
-      <script src="{{ site.baseurl }}/js/waypoints.min.js"></script>
-      <script src="{{ site.baseurl }}/js/spectrum.js"></script>
-      <script src="{{ site.baseurl }}/js/switcher.js"></script>
-      <script src="{{ site.baseurl }}/js/custom.js"></script>
-   </body>
-</html>
+   </div>
+</div>
+<!-- Title, Breadcrumb End-->
+
+<!-- Main Content start-->
+<div class="content">
+   <div class="container">
+   <div class="container">
+      <div class="row">
+         <div class="posts-block col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <article>
+               <h3 class="title">{{ page.title }}</h3>
+               <div class="post-content">
+                  {{ content }}
+               </div>
+            </article>
+         </div>
+      </div>
+      <div class="divider"></div>
+   </div>
+   </div>
+</div>
+<!-- Main Content end-->
