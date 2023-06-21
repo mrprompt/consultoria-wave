@@ -1,62 +1,28 @@
 ---
-layout: default
+layout: page
 title: Serviços
 active: servicos
 ---
-<!-- Content Start -->
-<div id="main">
-  <!-- Title, Breadcrumb Start-->
-  <div class="breadcrumb-wrapper">
-      <div class="container">
-         <div class="row">
-            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
-               <h2 class="title">Serviços</h2>
+<div class="row">
+  {% for servico in site.data.servicos %}
+    <div class="col-lg-4 col-md-4 col-sm-4 bottom-pad">
+      <div class="content-box ch-item">
+        <div class="ch-info-wrap">
+          <div class="ch-info">
+            <div class="ch-info-front ch-img-1">
+              <i class="fa fa-{{ servico.icone }}"></i>
             </div>
-            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
-               <div class="breadcrumbs pull-right">
-                  <ul>
-                     <ul>
-                        <li>Você está aqui:</li>
-                        <li><a href="{{ site.baseurl }}/">Início</a></li>
-                        <li>Serviços</li>
-                     </ul>
-                  </ul>
-               </div>
+            <div class="ch-info-back">
+              <i class="fa fa-{{ servico.icone }}"></i>
             </div>
-         </div>
-      </div>
-  </div>
-  <!-- Title, Breadcrumb End-->
-
-  <!-- Main Content start-->
-  <div class="content">
-    <div class="container">
-        <div class="row">
-          {% for servico in site.data.servicos %}
-            <div class="col-lg-4 col-md-4 col-sm-4 bottom-pad">
-              <div class="content-box ch-item">
-                <div class="ch-info-wrap">
-                  <div class="ch-info">
-                    <div class="ch-info-front ch-img-1">
-                      <i class="fa fa-{{ servico.icone }}"></i>
-                    </div>
-                    <div class="ch-info-back">
-                      <i class="fa fa-{{ servico.icone }}"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="content-box-info">
-                  <h3>{{ servico.titulo }} </h3>
-                  <p>{{ servico.descricao }}</p>
-                  <p><a href="{{ site.baseurl }}/servicos/{{ servico.slug }}">Saiba mais</a></p>
-                </div>
-              </div>
-            </div>
-          {% endfor %}  
+          </div>
+        </div>
+        <div class="content-box-info">
+          <h3>{{ servico.titulo }} </h3>
+          <p>{{ servico.descricao }}</p>
+          <p><a href="{{ site.baseurl }}/servicos/{{ servico.slug }}">Saiba mais</a></p>
+        </div>
       </div>
     </div>
-  </div>
-   <!-- Main Content end-->
+  {% endfor %}  
 </div>
-<!-- Content End -->
-         
