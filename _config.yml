@@ -9,7 +9,7 @@ highlighter: rouge
 timezone: UTC
 permalink: pretty
 paginate: 7
-pagination_path: "/:num"
+pagination_path: "blog/:num"
 google_analytics: "UA-105738007-1"
 formspree_id: "mpzevbjq"
 
