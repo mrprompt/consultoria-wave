@@ -8,7 +8,7 @@ encoding: UTF-8
 highlighter: rouge
 timezone: UTC
 permalink: pretty
-paginate: 7
+paginate: 5
 pagination_path: "blog/:num"
 google_analytics: "UA-105738007-1"
 formspree_id: "mpzevbjq"
