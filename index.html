@@ -3,85 +3,47 @@ layout: default
 title: Bem vindo
 active: inicio
 ---
-
 <!-- Slider Start-->
 <div class="fullwidthbanner-container">
   <div class="fullwidthbanner rslider">
     <ul>
       {% assign slides = site.data.slides | where:"active","true" %}
+      
       {% for slide in slides %}
       <li data-delay="6000" data-masterspeed="300" data-transition="fade">
         <div class="slotholder">
-          <img
-            src="{{ slide.secure_url }}"
-            data-fullwidthcentering="on"
-            alt="{{ slide.public_id }}"
-          />
+          <img src="{{ slide.secure_url }}" data-fullwidthcentering="on" alt="{{ slide.public_id }}" />
         </div>
-        <div
-          class="caption modern_big_bluebg h1 lft tp-caption start"
-          data-x="40"
-          data-y="85"
-          data-speed="700"
-          data-endspeed="800"
-          data-start="1000"
-          data-easing="easeOutQuint"
-          data-endeasing="easeOutQuint"
-        >
+
+        {% if slide.caption == true %}
+        <div class="caption modern_big_bluebg h1 lft tp-caption start" data-x="40" data-y="85" data-speed="700" data-endspeed="800" data-start="1000" data-easing="easeOutQuint" data-endeasing="easeOutQuint">
           <h3>Consultoria Wave</h3>
         </div>
-        <div
-          class="caption list_slide lfb tp-caption start"
-          data-easing="easeOutExpo"
-          data-start="1400"
-          data-speed="1050"
-          data-y="180"
-          data-x="40"
-        >
+        <div class="caption list_slide lfb tp-caption start" data-easing="easeOutExpo" data-start="1400" data-speed="1050" data-y="180" data-x="40">
           <div class="list-slide">
             <i class="fa fa-check slide-icon"></i>
             <h5>Nota 5,0 em Avaliações de Consumidores - Google</h5>
           </div>
         </div>
-        <div
-          class="caption list_slide lfb tp-caption start"
-          data-easing="easeOutExpo"
-          data-start="1800"
-          data-speed="1200"
-          data-y="220"
-          data-x="40"
-        >
+        <div class="caption list_slide lfb tp-caption start" data-easing="easeOutExpo" data-start="1800" data-speed="1200" data-y="220" data-x="40">
           <div class="list-slide">
             <i class="fa fa-check slide-icon"></i>
             <h5>Realizamos + de 80 Laudos de Ruído Ambiental</h5>
           </div>
         </div>
-        <div
-          class="caption list_slide lfb tp-caption start"
-          data-easing="easeOutExpo"
-          data-start="2200"
-          data-speed="1350"
-          data-y="260"
-          data-x="40"
-        >
+        <div class="caption list_slide lfb tp-caption start" data-easing="easeOutExpo" data-start="2200" data-speed="1350" data-y="260" data-x="40">
           <div class="list-slide">
             <i class="fa fa-check slide-icon"></i>
             <h5>Realizamos + de 30 Projetos Acústicos</h5>
           </div>
         </div>
-        <div
-          class="caption list_slide lfb tp-caption start"
-          data-easing="easeOutExpo"
-          data-start="2200"
-          data-speed="1350"
-          data-y="300"
-          data-x="40"
-        >
+        <div class="caption list_slide lfb tp-caption start" data-easing="easeOutExpo" data-start="2600" data-speed="1550" data-y="300" data-x="40">
           <div class="list-slide">
             <i class="fa fa-check slide-icon"></i>
             <h5>Realizamos + de 40 Consultorias</h5>
           </div>
         </div>
+        {% endif %}
       </li>
       {% endfor %}
     </ul>

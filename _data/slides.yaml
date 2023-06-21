@@ -2,78 +2,82 @@
   url: http://res.cloudinary.com/consultoria-wave/image/upload/v1504834875/f0vlr0mf27mndf4aa5sn.jpg
   secure_url: https://res.cloudinary.com/consultoria-wave/image/upload/v1504834875/f0vlr0mf27mndf4aa5sn.jpg
   active: true
+  caption: true
 
 - public_id: iyftv9hvs6vf84aydifg
   url: http://res.cloudinary.com/consultoria-wave/image/upload/v1504839079/iyftv9hvs6vf84aydifg.jpg
   secure_url: https://res.cloudinary.com/consultoria-wave/image/upload/v1504839079/iyftv9hvs6vf84aydifg.jpg
   active: true
+  caption: false
 
 - public_id: vgiw6oyvao9b8nvahdiq
   url: http://res.cloudinary.com/consultoria-wave/image/upload/v1594003289/vgiw6oyvao9b8nvahdiq.jpg
   secure_url: https://res.cloudinary.com/consultoria-wave/image/upload/v1594003289/vgiw6oyvao9b8nvahdiq.jpg
   active: true
+  caption: false
 
 - public_id: cn5md5uasgn8ov9tmrhu
   url: http://res.cloudinary.com/consultoria-wave/image/upload/v1594003342/cn5md5uasgn8ov9tmrhu.jpg
   secure_url: https://res.cloudinary.com/consultoria-wave/image/upload/v1594003342/cn5md5uasgn8ov9tmrhu.jpg
   active: true
+  caption: true
 
 - public_id: jlgn9fbvurxcsc0f6xta
   url: http://res.cloudinary.com/consultoria-wave/image/upload/v1594003463/jlgn9fbvurxcsc0f6xta.jpg 
   secure_url: https://res.cloudinary.com/consultoria-wave/image/upload/v1594003463/jlgn9fbvurxcsc0f6xta.jpg
   active: true
+  caption: false
 
 - public_id: rfadvkgftmlzlpmlhe4i
   url: http://res.cloudinary.com/consultoria-wave/image/upload/v1594178909/rfadvkgftmlzlpmlhe4i.jpg
   secure_url: https://res.cloudinary.com/consultoria-wave/image/upload/v1594178909/rfadvkgftmlzlpmlhe4i.jpg
   active: true
+  caption: false
 
 - public_id: vyigk1d54rbojxksjuap
   url: http://res.cloudinary.com/consultoria-wave/image/upload/v1594178972/vyigk1d54rbojxksjuap.jpg
   secure_url: https://res.cloudinary.com/consultoria-wave/image/upload/v1594178972/vyigk1d54rbojxksjuap.jpg
   active: true
+  caption: true
 
 - public_id: qvdppcbcqa9rz2dzsqi7
   url: http://res.cloudinary.com/consultoria-wave/image/upload/v1594180703/qvdppcbcqa9rz2dzsqi7.jpg
   secure_url: https://res.cloudinary.com/consultoria-wave/image/upload/v1594180703/qvdppcbcqa9rz2dzsqi7.jpg
   active: true
+  caption: false
 
 - public_id: oirzxqggsdnsqaqfqkzn
   url: http://res.cloudinary.com/consultoria-wave/image/upload/v1594181020/oirzxqggsdnsqaqfqkzn.jpg
   secure_url: https://res.cloudinary.com/consultoria-wave/image/upload/v1594181020/oirzxqggsdnsqaqfqkzn.jpg
   active: true
+  caption: true
 
 - public_id: fyqcwcboje8imsdn5vqr
   url: http://res.cloudinary.com/consultoria-wave/image/upload/v1594181873/fyqcwcboje8imsdn5vqr.jpg
   secure_url: https://res.cloudinary.com/consultoria-wave/image/upload/v1594181873/fyqcwcboje8imsdn5vqr.jpg
   active: true
+  caption: false
 
 - public_id: xhm3gjucpkpkwo33iln6
   url: http://res.cloudinary.com/consultoria-wave/image/upload/v1594181888/xhm3gjucpkpkwo33iln6.jpg
   secure_url: https://res.cloudinary.com/consultoria-wave/image/upload/v1594181888/xhm3gjucpkpkwo33iln6.jpg
   active: true
+  caption: false
 
 - public_id: kqeypt72hhvee4rhpj7g
   url: http://res.cloudinary.com/consultoria-wave/image/upload/v1594522314/kqeypt72hhvee4rhpj7g.jpg
   secure_url: https://res.cloudinary.com/consultoria-wave/image/upload/v1594522314/kqeypt72hhvee4rhpj7g.jpg
   active: true
+  caption: false
 
 - public_id: le9dm99mtlney8nsbwww
   url: http://res.cloudinary.com/consultoria-wave/image/upload/v1594523514/le9dm99mtlney8nsbwww.jpg
   secure_url: https://res.cloudinary.com/consultoria-wave/image/upload/v1594523514/le9dm99mtlney8nsbwww.jpg
   active: true
+  caption: true
 
 - public_id: eb2ebirhwwbyuyvcvvh0
   url: http://res.cloudinary.com/consultoria-wave/image/upload/v1594523533/eb2ebirhwwbyuyvcvvh0.jpg
   secure_url: https://res.cloudinary.com/consultoria-wave/image/upload/v1594523533/eb2ebirhwwbyuyvcvvh0.jpg
   active: true
-
-- public_id: ishvgowsh6fw67qrpbgx
-  url: http://res.cloudinary.com/consultoria-wave/image/upload/v1642691544/ishvgowsh6fw67qrpbgx.jpg
-  secure_url: https://res.cloudinary.com/consultoria-wave/image/upload/v1642691544/ishvgowsh6fw67qrpbgx.jpg
-  active: true
-
-- public_id: hrgtffvqblug9siq9zss
-  url: http://res.cloudinary.com/consultoria-wave/image/upload/v1642691585/hrgtffvqblug9siq9zss.jpg
-  secure_url: https://res.cloudinary.com/consultoria-wave/image/upload/v1642691585/hrgtffvqblug9siq9zss.jpg
-  active: true
+  caption: true
