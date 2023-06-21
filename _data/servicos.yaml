@@ -1,29 +1,29 @@
 - titulo: Consultoria
   descricao: Desenvolvimento de Soluções Acústicas e Vibrações
-  icone: arrows-alt
+  icone: random
   slug: consultoria
 
 - titulo: Projeto
   descricao: Dimensionamento de elementos para Tratamento Acústico
-  icone: eye
+  icone: folder-open-o
   slug: projeto
 
 - titulo: Laudo
   descricao: Avaliação de Ruído Ambiental/Poluição sonora
-  icone: edit
+  icone: pencil-square-o
   slug: laudo
 
 - titulo: Avaliação
   descricao: Realização de medições in loco de Acústica de Salas
-  icone: leaf
+  icone: volume-up
   slug: avaliacao
 
 - titulo: Material Acústico
   descricao: Determinação de Propriedades Acústicas em Laboratório
-  icone: cog
+  icone: signal
   slug: material-acustico
 
 - titulo: Ambiente musical
   descricao: Projeto Acústico de estúdio musical, sala de mixagem e rádio
-  icone: search
+  icone: headphones
   slug: estudio
