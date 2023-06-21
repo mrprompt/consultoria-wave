@@ -1,3 +1,2 @@
 # Consultoria Wave
-
-Website institucional da [Consultoria Wave](https://www.consultoriawave.com).
+Template utilizado na construção do site [Consultoria Wave](https://www.consultoriawave.com).
