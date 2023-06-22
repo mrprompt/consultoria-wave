@@ -1560,12 +1560,14 @@ a.prev.disabled,a.next.disabled {
 }
 
 .our-clients .testimonial-author-info a {
-    color: #fff;
+    color: #000;
+    font-size: 110%;
 }
 
 span.color {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
+    color: #000;
 }
 
 
