@@ -1,33 +1,64 @@
 <!-- Recent works start-->
 <div class="recentworks bottom-pad">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 animate_afl d1">
-          <div class="portfolio-desc">
-            <h3 class="title">Portfólio</h3>
-            <p>
-              Confira algumas imagens dos nossos projetos desenvolvidos para diversos tipos de ambientes: auditório, sala de
-              mixagem, estúdio musical, rádios e sala de vídeo-conferência.
-            </p>
-          </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 animate_afl d1">
+        <div class="portfolio-desc">
+          <h3 class="title">Portfólio</h3>
+          <p>
+            Confira algumas imagens dos nossos projetos desenvolvidos para diversos tipos de ambientes: auditório, sala
+            de
+            mixagem, estúdio musical, rádios e sala de vídeo-conferência.
+          </p>
         </div>
-        <div class="col-lg-8 col-md-8 col-xs-12">
-          <div class="row">
-            <div id="portfolio-carousel" class="portfolio-carousel slide">
-              <div class="carousel-inner">
-                <div class="item active">
-                  {% include portifolio_0.html %}
-                </div>
-                {% for i in (1...6) %}
-                <div class="item">
-                  {% include portifolio_{{ i }}.html %}
+      </div>
+      <div class="col-lg-8 col-md-8 col-xs-12">
+        <div class="row">
+          <div id="portfolio-carousel" class="portfolio-carousel slide">
+            <div class="carousel-inner">
+              {% assign total_images = 20 %}
+              {% assign images_per_slide = 6 %}
+              {% assign images_per_col = 3 %}
+
+              {% assign slide_index = 0 %}
+              {% assign i = 1 %}
+
+              {% for image_num in (1..total_images) %}
+              {% assign position_in_slide = image_num | minus: 1 | modulo: images_per_slide %}
+
+              {% if position_in_slide == 0 %}
+              {% if slide_index > 0 %}
+            </div>
+          </div>
+          {% endif %}
+
+          {% if slide_index == 0 %}
+          <div class="item active">
+            {% else %}
+            <div class="item">
+              {% endif %}
+              <div class="row">
+                {% assign slide_index = slide_index | plus: 1 %}
+                {% endif %}
+
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item animate_afc d2">
+                  <div class="portfolio-item" style="margin-bottom: 30px;">
+                    <a href="{{ site.baseurl }}/img/portifolio/{{ image_num }}.jpg" class="portfolio-item-link" data-rel="prettyPhoto">
+                      <span class="portfolio-item-hover"></span>
+                      <span class="fullscreen"><i class="fa fa-search"></i></span>
+                      <img src="{{ site.baseurl }}/img/portifolio/{{ image_num }}.jpg" alt=" " class="" />
+                    </a>
+                    <div class="clearfix"></div>
+                  </div>
                 </div>
                 {% endfor %}
               </div>
-              <div class="clearfix"></div>
+            </div>
           </div>
+          <div class="clearfix"></div>
         </div>
       </div>
     </div>
+  </div>
 </div>
 <!-- Recent work end-->
