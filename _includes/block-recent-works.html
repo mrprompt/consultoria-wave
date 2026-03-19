@@ -18,9 +18,11 @@
                 <div class="item active">
                   {% include portifolio_0.html %}
                 </div>
+                {% for i in (1...6) %}
                 <div class="item">
-                  {% include portifolio_1.html %}
+                  {% include portifolio_{{ i }}.html %}
                 </div>
+                {% endfor %}
               </div>
               <div class="clearfix"></div>
           </div>

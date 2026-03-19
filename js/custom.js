@@ -248,14 +248,9 @@ jQuery(window).load(function() {
 /*	Carousel Section
 /*----------------------------------------------------*/
 
-	jQuery('.portfolio-carousel').carousel({interval: false, wrap: false});
-	
-	
+	jQuery('.portfolio-carousel').carousel({interval: 5000, wrap: true});
 	jQuery('.client-carousel').carousel({interval: false, wrap: false});
-	
 	jQuery('.testimonials-carousel').carousel({interval: 5000, pause: "hover"});
-
-
 
 $(document).ready(function(){
 		$("a[rel^='prettyPhoto']").prettyPhoto({
